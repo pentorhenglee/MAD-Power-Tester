@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800;1,900&family=IBM+Plex+Mono:wght@700&display=swap");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:240px;background:#000;overflow:hidden}
+.screen{position:relative;width:240px;height:320px;overflow:hidden;background:#000}
+.screen div,.screen svg{position:absolute;display:block}
+.f-display{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.f-italic{font-style:italic;font-weight:900;letter-spacing:-1px}
+.f-mono{font-family:"IBM Plex Mono",monospace;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+html,body{height:6400px}
+</style></head><body>
+<div class="screen" data-screen="attract">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<svg style="left:18px;top:18px" width="29" height="48" viewBox="0 0 29 48" aria-hidden="true"><g transform="scale(1.1)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#f4ce20"/></g></svg>
+<svg style="left:192px;top:18px" width="29" height="48" viewBox="0 0 29 48" aria-hidden="true"><g transform="scale(1.1)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#b8960c"/></g></svg>
+<svg style="left:20px;top:268px" width="18" height="31" viewBox="0 0 18 31" aria-hidden="true"><g transform="scale(0.7)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#b8960c"/></g></svg>
+<svg style="left:202px;top:268px" width="18" height="31" viewBox="0 0 18 31" aria-hidden="true"><g transform="scale(0.7)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#f4ce20"/></g></svg>
+<div class="f-display f-italic" style="left:0px;top:64px;height:66px;font-size:78px;line-height:66px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:240px">POWER</div>
+<div class="f-display f-italic" style="left:0px;top:126px;height:66px;font-size:78px;line-height:66px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:240px">TESTER</div>
+<div class="f-display" style="left:0px;top:208px;height:30px;font-size:30px;line-height:30px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">TAP TO START</div>
+<div style="left:44px;top:250px;width:152px;height:1px;background:#2a2e35"></div>
+<div class="f-display" style="left:0px;top:260px;height:16px;font-size:15px;line-height:16px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">HIGH SCORE</div>
+<svg style="left:72px;top:287px" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true"><path d="M1 15 L2 3 L8 8 L12 1 L16 8 L22 3 L23 15 Z" fill="#f4ce20"/><circle cx="2" cy="3" r="1.8" fill="#f4ce20"/><circle cx="12" cy="1.8" r="1.8" fill="#f4ce20"/><circle cx="22" cy="3" r="1.8" fill="#f4ce20"/></svg>
+<div class="f-mono" style="left:102px;top:284px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:left;letter-spacing:0px;width:64px;background:#000000" data-dyn="highscore" data-fmt="%4d">2830</div>
+</div>
+<div class="screen" data-screen="board">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #27c7e8;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:38px;font-size:38px;line-height:38px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">ALL TIME BEST</div>
+<div style="left:24px;top:66px;width:192px;height:2px;background:#0d3a46"></div>
+<div class="f-display" style="left:30px;top:84px;height:24px;font-size:24px;line-height:24px;color:#f4ce20;text-align:left;letter-spacing:0px;width:20px">1</div>
+<svg style="left:54px;top:89px" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true"><path d="M1 15 L2 3 L8 8 L12 1 L16 8 L22 3 L23 15 Z" fill="#f4ce20"/><circle cx="2" cy="3" r="1.8" fill="#f4ce20"/><circle cx="12" cy="1.8" r="1.8" fill="#f4ce20"/><circle cx="22" cy="3" r="1.8" fill="#f4ce20"/></svg>
+<div class="f-mono" style="left:144px;top:84px;height:24px;font-size:24px;line-height:24px;color:#f4ce20;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="rank1" data-fmt="%4d">2830</div>
+<div style="left:24px;top:116px;width:192px;height:1px;background:#1c2026"></div>
+<div class="f-display" style="left:30px;top:124px;height:24px;font-size:24px;line-height:24px;color:#8b929b;text-align:left;letter-spacing:0px;width:20px">2</div>
+<div class="f-mono" style="left:144px;top:124px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="rank2" data-fmt="%4d">2710</div>
+<div style="left:24px;top:156px;width:192px;height:1px;background:#1c2026"></div>
+<div class="f-display" style="left:30px;top:164px;height:24px;font-size:24px;line-height:24px;color:#8b929b;text-align:left;letter-spacing:0px;width:20px">3</div>
+<div class="f-mono" style="left:144px;top:164px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="rank3" data-fmt="%4d">2600</div>
+<div style="left:24px;top:196px;width:192px;height:1px;background:#1c2026"></div>
+<div class="f-display" style="left:30px;top:204px;height:24px;font-size:24px;line-height:24px;color:#8b929b;text-align:left;letter-spacing:0px;width:20px">4</div>
+<div class="f-mono" style="left:144px;top:204px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="rank4" data-fmt="%4d">2480</div>
+<div style="left:24px;top:236px;width:192px;height:1px;background:#1c2026"></div>
+<div class="f-display" style="left:30px;top:244px;height:24px;font-size:24px;line-height:24px;color:#8b929b;text-align:left;letter-spacing:0px;width:20px">5</div>
+<div class="f-mono" style="left:144px;top:244px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="rank5" data-fmt="%4d">2320</div>
+<div style="left:24px;top:278px;width:192px;height:2px;background:#0d3a46"></div>
+<div class="f-display" style="left:0px;top:288px;height:18px;font-size:18px;line-height:18px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">TAP TO START</div>
+</div>
+<div class="screen" data-screen="intro-scream">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #27c7e8;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">STAGE 1 / 3</div>
+<svg style="left:58px;top:50px" width="124" height="96" viewBox="0 0 124 96" aria-hidden="true"><circle cx="54" cy="50" r="40" fill="#27c7e8"/><path d="M30 34 L42 40 L30 44" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M78 34 L66 40 L78 44" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="54" cy="66" rx="17" ry="18" fill="#000"/><ellipse cx="54" cy="76" rx="10" ry="6" fill="#0d6f86"/><path d="M100 30 L116 22" stroke="#27c7e8" stroke-width="5" stroke-linecap="round"/><path d="M102 50 L120 50" stroke="#27c7e8" stroke-width="5" stroke-linecap="round"/><path d="M100 70 L116 78" stroke="#27c7e8" stroke-width="5" stroke-linecap="round"/></svg>
+<div class="f-display" style="left:0px;top:152px;height:52px;font-size:56px;line-height:52px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">SCREAM</div>
+<div class="f-display" style="left:0px;top:212px;height:18px;font-size:17px;line-height:18px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">SHOUT AS LOUD</div>
+<div class="f-display" style="left:0px;top:230px;height:18px;font-size:17px;line-height:18px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">AS YOU CAN</div>
+<div class="f-display" style="left:0px;top:248px;height:18px;font-size:17px;line-height:18px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">FOR 10 SECONDS</div>
+<div style="left:36px;top:274px;width:168px;height:28px;background:#27c7e8;border-radius:4px"></div>
+<div class="f-display" style="left:36px;top:274px;height:28px;font-size:19px;line-height:28px;color:#000000;text-align:center;letter-spacing:1px;width:168px">TAP TO START</div>
+</div>
+<div class="screen" data-screen="ready-3">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:40px;height:40px;font-size:44px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">GET READY</div>
+<svg style="left:50px;top:100px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62" fill="none" stroke="#f4ce20" stroke-width="6"/><circle cx="70" cy="70" r="50" fill="none" stroke="#2a2e35" stroke-width="2"/></svg>
+<div class="f-mono" style="left:96px;top:146px;height:48px;font-size:48px;line-height:48px;color:#f4ce20;text-align:center;letter-spacing:0px;width:48px;background:#000000" data-dyn="count" data-fmt="%1d">3</div>
+<div class="f-display" style="left:0px;top:266px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">STARTS IN</div>
+</div>
+<div class="screen" data-screen="ready-2">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:40px;height:40px;font-size:44px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">GET READY</div>
+<svg style="left:50px;top:100px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62" fill="none" stroke="#f4ce20" stroke-width="6"/><circle cx="70" cy="70" r="50" fill="none" stroke="#2a2e35" stroke-width="2"/></svg>
+<div class="f-mono" style="left:96px;top:146px;height:48px;font-size:48px;line-height:48px;color:#f4ce20;text-align:center;letter-spacing:0px;width:48px;background:#000000" data-dyn="count" data-fmt="%1d">2</div>
+<div class="f-display" style="left:0px;top:266px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">STARTS IN</div>
+</div>
+<div class="screen" data-screen="ready-1">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:40px;height:40px;font-size:44px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">GET READY</div>
+<svg style="left:50px;top:100px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62" fill="none" stroke="#f4ce20" stroke-width="6"/><circle cx="70" cy="70" r="50" fill="none" stroke="#2a2e35" stroke-width="2"/></svg>
+<div class="f-mono" style="left:96px;top:146px;height:48px;font-size:48px;line-height:48px;color:#f4ce20;text-align:center;letter-spacing:0px;width:48px;background:#000000" data-dyn="count" data-fmt="%1d">1</div>
+<div class="f-display" style="left:0px;top:266px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">STARTS IN</div>
+</div>
+<div class="screen" data-screen="quiet-2">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:40px;height:40px;font-size:38px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">STAY QUIET</div>
+<svg style="left:50px;top:100px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62" fill="none" stroke="#27c7e8" stroke-width="6"/><circle cx="70" cy="70" r="50" fill="none" stroke="#2a2e35" stroke-width="2"/></svg>
+<div class="f-mono" style="left:96px;top:146px;height:48px;font-size:48px;line-height:48px;color:#27c7e8;text-align:center;letter-spacing:0px;width:48px;background:#000000" data-dyn="count" data-fmt="%1d">2</div>
+<div class="f-display" style="left:0px;top:266px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">MEASURING ROOM</div>
+</div>
+<div class="screen" data-screen="quiet-1">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #3a3e45;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:40px;height:40px;font-size:38px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">STAY QUIET</div>
+<svg style="left:50px;top:100px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true"><circle cx="70" cy="70" r="62" fill="none" stroke="#27c7e8" stroke-width="6"/><circle cx="70" cy="70" r="50" fill="none" stroke="#2a2e35" stroke-width="2"/></svg>
+<div class="f-mono" style="left:96px;top:146px;height:48px;font-size:48px;line-height:48px;color:#27c7e8;text-align:center;letter-spacing:0px;width:48px;background:#000000" data-dyn="count" data-fmt="%1d">1</div>
+<div class="f-display" style="left:0px;top:266px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">MEASURING ROOM</div>
+</div>
+<div class="screen" data-screen="scream">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #27c7e8;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">SCREAM</div>
+<svg style="left:50px;top:62px" width="140" height="140" viewBox="0 0 140 140" aria-hidden="true" data-dyn="energyarc" data-fmt="%4d"><circle cx="70" cy="70" r="56" fill="none" stroke="#0b3540" stroke-width="12" stroke-linecap="round" stroke-dasharray="293.2 400" transform="rotate(120 70 70)"/><circle cx="70" cy="70" r="56" fill="none" stroke="#27c7e8" stroke-width="12" stroke-linecap="round" stroke-dasharray="182.9568 400" transform="rotate(120 70 70)"/></svg>
+<div class="f-mono" style="left:72px;top:108px;height:40px;font-size:40px;line-height:40px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:96px;background:#000000" data-dyn="score" data-fmt="%3d">624</div>
+<div class="f-display" style="left:70px;top:152px;height:16px;font-size:16px;line-height:16px;color:#8b929b;text-align:center;letter-spacing:0px;width:100px">/ 1000</div>
+<div style="left:21px;top:214px;width:198px;height:34px;background:#000000" data-dyn="wave" data-fmt="%2d"><div style="left:0px;top:15px;width:3px;height:4px;background:#27c7e8"></div><div style="left:6px;top:14px;width:3px;height:6px;background:#27c7e8"></div><div style="left:12px;top:13px;width:3px;height:9px;background:#27c7e8"></div><div style="left:18px;top:13px;width:3px;height:7px;background:#27c7e8"></div><div style="left:24px;top:11px;width:3px;height:12px;background:#27c7e8"></div><div style="left:30px;top:12px;width:3px;height:10px;background:#27c7e8"></div><div style="left:36px;top:9px;width:3px;height:16px;background:#27c7e8"></div><div style="left:42px;top:11px;width:3px;height:13px;background:#27c7e8"></div><div style="left:48px;top:7px;width:3px;height:20px;background:#27c7e8"></div><div style="left:54px;top:9px;width:3px;height:17px;background:#27c7e8"></div><div style="left:60px;top:5px;width:3px;height:24px;background:#27c7e8"></div><div style="left:66px;top:3px;width:3px;height:28px;background:#27c7e8"></div><div style="left:72px;top:6px;width:3px;height:22px;background:#27c7e8"></div><div style="left:78px;top:2px;width:3px;height:30px;background:#27c7e8"></div><div style="left:84px;top:4px;width:3px;height:26px;background:#27c7e8"></div><div style="left:90px;top:1px;width:3px;height:32px;background:#27c7e8"></div><div style="left:96px;top:3px;width:3px;height:28px;background:#27c7e8"></div><div style="left:102px;top:2px;width:3px;height:30px;background:#27c7e8"></div><div style="left:108px;top:5px;width:3px;height:24px;background:#27c7e8"></div><div style="left:114px;top:3px;width:3px;height:27px;background:#27c7e8"></div><div style="left:120px;top:7px;width:3px;height:20px;background:#27c7e8"></div><div style="left:126px;top:6px;width:3px;height:22px;background:#27c7e8"></div><div style="left:132px;top:9px;width:3px;height:16px;background:#27c7e8"></div><div style="left:138px;top:8px;width:3px;height:18px;background:#27c7e8"></div><div style="left:144px;top:11px;width:3px;height:12px;background:#27c7e8"></div><div style="left:150px;top:10px;width:3px;height:14px;background:#27c7e8"></div><div style="left:156px;top:13px;width:3px;height:9px;background:#27c7e8"></div><div style="left:162px;top:11px;width:3px;height:11px;background:#27c7e8"></div><div style="left:168px;top:13px;width:3px;height:7px;background:#27c7e8"></div><div style="left:174px;top:13px;width:3px;height:8px;background:#27c7e8"></div><div style="left:180px;top:15px;width:3px;height:5px;background:#27c7e8"></div><div style="left:186px;top:14px;width:3px;height:6px;background:#27c7e8"></div><div style="left:192px;top:15px;width:3px;height:4px;background:#27c7e8"></div></div>
+<div class="f-mono" style="left:76px;top:264px;height:32px;font-size:32px;line-height:32px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:72px;background:#000000" data-dyn="time" data-fmt="%04.1f">06.2</div>
+<div class="f-display" style="left:150px;top:268px;height:28px;font-size:28px;line-height:28px;color:#f5f5f0;text-align:left;letter-spacing:0px;width:20px">s</div>
+</div>
+<div class="screen" data-screen="result-scream">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #27c7e8;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">SCREAM</div>
+<div style="left:28px;top:74px;width:184px;height:150px;border:3px solid #27c7e8;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:94px;height:22px;font-size:22px;line-height:22px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">SCORE</div>
+<div class="f-mono" style="left:48px;top:128px;height:48px;font-size:48px;line-height:48px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:144px;background:#000000" data-dyn="score" data-fmt="%4d">668</div>
+<div class="f-display" style="left:0px;top:186px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:0px;width:240px">/ 1000</div>
+<div class="f-display" style="left:0px;top:258px;height:28px;font-size:28px;line-height:28px;color:#27c7e8;text-align:center;letter-spacing:1px;width:240px">NEXT: SMASH</div>
+</div>
+<div class="screen" data-screen="intro-smash">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #ef4037;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">STAGE 2 / 3</div>
+<svg style="left:58px;top:50px" width="124" height="96" viewBox="0 0 124 96" aria-hidden="true"><circle cx="62" cy="48" r="40" fill="#2a0e0c"/><circle cx="62" cy="48" r="31" fill="#ef4037" stroke="#ff8a82" stroke-width="5"/><rect x="44" y="30" width="16" height="8" rx="4" fill="#ffc2bd"/><path d="M8 22 L20 30" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/><path d="M2 52 L18 52" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/><path d="M8 82 L20 74" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/><path d="M116 22 L104 30" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/><path d="M122 52 L106 52" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/><path d="M116 82 L104 74" stroke="#ef4037" stroke-width="5" stroke-linecap="round"/></svg>
+<div class="f-display" style="left:0px;top:152px;height:52px;font-size:56px;line-height:52px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">SMASH</div>
+<div class="f-display" style="left:0px;top:212px;height:18px;font-size:17px;line-height:18px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">HIT EVERY PAD</div>
+<div class="f-display" style="left:0px;top:230px;height:18px;font-size:17px;line-height:18px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">THE MOMENT IT LIGHTS</div>
+<div class="f-display" style="left:0px;top:248px;height:18px;font-size:17px;line-height:18px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">BEFORE TIME RUNS OUT</div>
+<div style="left:36px;top:274px;width:168px;height:28px;background:#ef4037;border-radius:4px"></div>
+<div class="f-display" style="left:36px;top:274px;height:28px;font-size:19px;line-height:28px;color:#000000;text-align:center;letter-spacing:1px;width:168px">TAP TO START</div>
+</div>
+<div class="screen" data-screen="smash">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #ef4037;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">SMASH</div>
+<div style="left:47px;top:66px;width:146px;height:146px;background:#101215;border:2px solid #262a30;border-radius:10px"></div>
+<div style="left:54px;top:73px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad0" data-fmt="%1d"></div>
+<div style="left:64px;top:81px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:101px;top:73px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad1" data-fmt="%1d"></div>
+<div style="left:111px;top:81px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:148px;top:73px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad2" data-fmt="%1d"></div>
+<div style="left:158px;top:81px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:54px;top:120px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad3" data-fmt="%1d"></div>
+<div style="left:64px;top:128px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:101px;top:120px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad4" data-fmt="%1d"></div>
+<div style="left:111px;top:128px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:148px;top:120px;width:38px;height:38px;background:#ef4037;border:3px solid #ff8a82;border-radius:19px" data-dyn="pad5" data-fmt="%1d"></div>
+<div style="left:158px;top:128px;width:10px;height:5px;background:#ffc2bd;border-radius:3px"></div>
+<div style="left:54px;top:167px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad6" data-fmt="%1d"></div>
+<div style="left:64px;top:175px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:101px;top:167px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad7" data-fmt="%1d"></div>
+<div style="left:111px;top:175px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div style="left:148px;top:167px;width:38px;height:38px;background:#3a3e46;border:3px solid #23262b;border-radius:19px" data-dyn="pad8" data-fmt="%1d"></div>
+<div style="left:158px;top:175px;width:10px;height:5px;background:#50555e;border-radius:3px"></div>
+<div class="f-display" style="left:22px;top:226px;height:20px;font-size:20px;line-height:20px;color:#ef4037;text-align:left;letter-spacing:1px;width:60px">TIME</div>
+<div class="f-mono" style="left:140px;top:228px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:64px;background:#000000" data-dyn="time" data-fmt="%4.1f">12.8</div>
+<div class="f-display" style="left:205px;top:226px;height:20px;font-size:20px;line-height:20px;color:#f5f5f0;text-align:left;letter-spacing:0px;width:14px">s</div>
+<div style="left:22px;top:252px;width:196px;height:6px;background:#3d1412"></div>
+<div style="left:22px;top:252px;width:84px;height:6px;background:#ef4037" data-dyn="timebar" data-fmt="%3d"></div>
+<div class="f-display" style="left:22px;top:272px;height:20px;font-size:20px;line-height:20px;color:#ef4037;text-align:left;letter-spacing:1px;width:60px">HITS</div>
+<div style="left:22px;top:295px;width:22px;height:3px;background:#ef4037"></div>
+<div class="f-mono" style="left:120px;top:270px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:96px;background:#000000" data-dyn="hits" data-fmt="%2d/30">12/30</div>
+</div>
+<div class="screen" data-screen="result-smash">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #ef4037;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">SMASH</div>
+<div style="left:28px;top:74px;width:184px;height:150px;border:3px solid #ef4037;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:94px;height:22px;font-size:22px;line-height:22px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">SCORE</div>
+<div class="f-mono" style="left:48px;top:128px;height:48px;font-size:48px;line-height:48px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:144px;background:#000000" data-dyn="score" data-fmt="%4d">735</div>
+<div class="f-display" style="left:0px;top:186px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:0px;width:240px">/ 1000</div>
+<div class="f-display" style="left:0px;top:258px;height:28px;font-size:28px;line-height:28px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">NEXT: PUNCH</div>
+</div>
+<div class="screen" data-screen="intro-punch">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #f4ce20;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">STAGE 3 / 3</div>
+<svg style="left:64px;top:50px" width="112" height="95" viewBox="0 0 112 95" aria-hidden="true"><g transform="scale(0.7)"><path d="M80 0 V16" stroke="#8a7410" stroke-width="3"/><circle cx="80" cy="19" r="4" fill="none" stroke="#8a7410" stroke-width="3"/><g transform="rotate(-14 80 22)"><rect x="70" y="22" width="20" height="8" rx="2" fill="#8a7410"/><rect x="58" y="28" width="44" height="92" rx="20" fill="#f4ce20"/><rect x="58" y="28" width="16" height="92" rx="8" fill="#d8b012"/><rect x="82" y="38" width="7" height="62" rx="3.5" fill="#ffe680"/><rect x="58" y="104" width="44" height="6" fill="#c9a20e"/></g><path d="M24 30 L12 52 H21 L16 70 L33 44 H24 L29 30 Z" fill="#f4ce20"/><path d="M138 52 L126 74 H135 L130 92 L147 66 H138 L143 52 Z" fill="#f4ce20"/><path d="M30 96 L18 104" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/><path d="M126 24 L138 16" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/><path d="M132 112 L146 118" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/></g></svg>
+<div class="f-display" style="left:0px;top:152px;height:52px;font-size:56px;line-height:52px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">PUNCH</div>
+<div class="f-display" style="left:0px;top:212px;height:18px;font-size:17px;line-height:18px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">PRESS GREEN TO ARM</div>
+<div class="f-display" style="left:0px;top:230px;height:18px;font-size:17px;line-height:18px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">PUNCH ON HIT NOW!</div>
+<div class="f-display" style="left:0px;top:248px;height:18px;font-size:17px;line-height:18px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">ONE PUNCH ONLY</div>
+<div style="left:36px;top:274px;width:168px;height:28px;background:#f4ce20;border-radius:4px"></div>
+<div class="f-display" style="left:36px;top:274px;height:28px;font-size:19px;line-height:28px;color:#000000;text-align:center;letter-spacing:1px;width:168px">TAP TO START</div>
+</div>
+<div class="screen" data-screen="punch">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #f4ce20;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">PUNCH</div>
+<svg style="left:40px;top:56px" width="160" height="136" viewBox="0 0 160 136" aria-hidden="true"><g transform="scale(1.0)"><path d="M80 0 V16" stroke="#8a7410" stroke-width="3"/><circle cx="80" cy="19" r="4" fill="none" stroke="#8a7410" stroke-width="3"/><g transform="rotate(-14 80 22)"><rect x="70" y="22" width="20" height="8" rx="2" fill="#8a7410"/><rect x="58" y="28" width="44" height="92" rx="20" fill="#f4ce20"/><rect x="58" y="28" width="16" height="92" rx="8" fill="#d8b012"/><rect x="82" y="38" width="7" height="62" rx="3.5" fill="#ffe680"/><rect x="58" y="104" width="44" height="6" fill="#c9a20e"/></g><path d="M24 30 L12 52 H21 L16 70 L33 44 H24 L29 30 Z" fill="#f4ce20"/><path d="M138 52 L126 74 H135 L130 92 L147 66 H138 L143 52 Z" fill="#f4ce20"/><path d="M30 96 L18 104" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/><path d="M126 24 L138 16" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/><path d="M132 112 L146 118" stroke="#f4ce20" stroke-width="4" stroke-linecap="round"/></g></svg>
+<div style="left:68px;top:198px;width:104px;height:28px;background:#f4ce20;border-radius:6px"></div>
+<div class="f-mono" style="left:80px;top:204px;height:16px;font-size:16px;line-height:16px;color:#000000;text-align:center;letter-spacing:0px;width:80px;background:#f4ce20" data-dyn="state" data-fmt="%-5s">READY</div>
+<div class="f-display" style="left:0px;top:242px;height:18px;font-size:17px;line-height:18px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">PRESS GREEN TO ARM</div>
+<div class="f-display" style="left:0px;top:266px;height:18px;font-size:17px;line-height:18px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">THEN PUNCH ONCE</div>
+</div>
+<div class="screen" data-screen="punch-hit">
+<div style="left:0px;top:0px;width:240px;height:320px;background:#f4ce20"></div>
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #000000;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#000000;text-align:center;letter-spacing:1px;width:240px">PUNCH</div>
+<div style="left:60px;top:66px;width:120px;height:3px;background:#000000"></div>
+<svg style="left:20px;top:110px" width="36" height="62" viewBox="0 0 36 62" aria-hidden="true"><g transform="scale(1.4)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#000"/></g></svg>
+<svg style="left:184px;top:110px" width="36" height="62" viewBox="0 0 36 62" aria-hidden="true"><g transform="scale(1.4)"><path d="M16 0 L1 25 H11 L6 44 L25 15 H14.5 L20 0 Z" fill="#000"/></g></svg>
+<div class="f-display f-italic" style="left:0px;top:84px;height:66px;font-size:78px;line-height:66px;color:#000000;text-align:center;letter-spacing:0px;width:240px">HIT</div>
+<div class="f-display f-italic" style="left:0px;top:146px;height:66px;font-size:78px;line-height:66px;color:#000000;text-align:center;letter-spacing:0px;width:240px">NOW!</div>
+<div style="left:36px;top:244px;width:168px;height:28px;background:#000000;border-radius:4px"></div>
+<div class="f-display" style="left:36px;top:244px;height:28px;font-size:19px;line-height:28px;color:#f4ce20;text-align:center;letter-spacing:1px;width:168px">PUNCH THE BAG</div>
+</div>
+<div class="screen" data-screen="result-punch">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #f4ce20;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:18px;height:40px;font-size:44px;line-height:40px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">PUNCH</div>
+<div style="left:28px;top:74px;width:184px;height:150px;border:3px solid #f4ce20;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:94px;height:22px;font-size:22px;line-height:22px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">SCORE</div>
+<div class="f-mono" style="left:48px;top:128px;height:48px;font-size:48px;line-height:48px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:144px;background:#000000" data-dyn="score" data-fmt="%4d">795</div>
+<div class="f-display" style="left:0px;top:186px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:0px;width:240px">/ 1000</div>
+<div class="f-display" style="left:0px;top:258px;height:28px;font-size:28px;line-height:28px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">NEXT: TOTAL</div>
+</div>
+<div class="screen" data-screen="final">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #f5f5f0;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:30px;font-size:32px;line-height:30px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">TOTAL SCORE</div>
+<div class="f-mono" style="left:48px;top:60px;height:48px;font-size:48px;line-height:48px;color:#f5f5f0;text-align:center;letter-spacing:0px;width:144px;background:#000000" data-dyn="total" data-fmt="%4d">2198</div>
+<div class="f-display" style="left:0px;top:114px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:0px;width:240px">/ 3000</div>
+<div style="left:24px;top:144px;width:192px;height:1px;background:#2a2e35"></div>
+<div style="left:26px;top:159px;width:4px;height:16px;background:#27c7e8"></div>
+<div class="f-display" style="left:38px;top:156px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">SCREAM</div>
+<div class="f-mono" style="left:160px;top:159px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage1" data-fmt="%3d">668</div>
+<div style="left:26px;top:189px;width:4px;height:16px;background:#ef4037"></div>
+<div class="f-display" style="left:38px;top:186px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">SMASH</div>
+<div class="f-mono" style="left:160px;top:189px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage2" data-fmt="%3d">735</div>
+<div style="left:26px;top:219px;width:4px;height:16px;background:#f4ce20"></div>
+<div class="f-display" style="left:38px;top:216px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">PUNCH</div>
+<div class="f-mono" style="left:160px;top:219px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage3" data-fmt="%3d">795</div>
+<div style="left:24px;top:250px;width:192px;height:1px;background:#2a2e35"></div>
+<div class="f-display" style="left:0px;top:260px;height:16px;font-size:15px;line-height:16px;color:#8b929b;text-align:center;letter-spacing:1px;width:240px">ALL TIME BEST</div>
+<svg style="left:72px;top:285px" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true"><path d="M1 15 L2 3 L8 8 L12 1 L16 8 L22 3 L23 15 Z" fill="#f4ce20"/><circle cx="2" cy="3" r="1.8" fill="#f4ce20"/><circle cx="12" cy="1.8" r="1.8" fill="#f4ce20"/><circle cx="22" cy="3" r="1.8" fill="#f4ce20"/></svg>
+<div class="f-mono" style="left:102px;top:282px;height:24px;font-size:24px;line-height:24px;color:#f5f5f0;text-align:left;letter-spacing:0px;width:64px;background:#000000" data-dyn="best" data-fmt="%4d">2830</div>
+</div>
+<div class="screen" data-screen="final-high">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #f4ce20;border-radius:8px"></div>
+<div class="f-display" style="left:0px;top:20px;height:30px;font-size:32px;line-height:30px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">TOTAL SCORE</div>
+<div class="f-mono" style="left:48px;top:60px;height:48px;font-size:48px;line-height:48px;color:#f4ce20;text-align:center;letter-spacing:0px;width:144px;background:#000000" data-dyn="total" data-fmt="%4d">2198</div>
+<div class="f-display" style="left:0px;top:114px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:center;letter-spacing:0px;width:240px">/ 3000</div>
+<div style="left:24px;top:144px;width:192px;height:1px;background:#2a2e35"></div>
+<div style="left:26px;top:159px;width:4px;height:16px;background:#27c7e8"></div>
+<div class="f-display" style="left:38px;top:156px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">SCREAM</div>
+<div class="f-mono" style="left:160px;top:159px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage1" data-fmt="%3d">668</div>
+<div style="left:26px;top:189px;width:4px;height:16px;background:#ef4037"></div>
+<div class="f-display" style="left:38px;top:186px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">SMASH</div>
+<div class="f-mono" style="left:160px;top:189px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage2" data-fmt="%3d">735</div>
+<div style="left:26px;top:219px;width:4px;height:16px;background:#f4ce20"></div>
+<div class="f-display" style="left:38px;top:216px;height:22px;font-size:21px;line-height:22px;color:#f5f5f0;text-align:left;letter-spacing:1px;width:100px">PUNCH</div>
+<div class="f-mono" style="left:160px;top:219px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:right;letter-spacing:0px;width:54px;background:#000000" data-dyn="stage3" data-fmt="%3d">795</div>
+<div style="left:24px;top:250px;width:192px;height:1px;background:#2a2e35"></div>
+<svg style="left:108px;top:260px" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true"><path d="M1 15 L2 3 L8 8 L12 1 L16 8 L22 3 L23 15 Z" fill="#f4ce20"/><circle cx="2" cy="3" r="1.8" fill="#f4ce20"/><circle cx="12" cy="1.8" r="1.8" fill="#f4ce20"/><circle cx="22" cy="3" r="1.8" fill="#f4ce20"/></svg>
+<div class="f-display" style="left:0px;top:280px;height:22px;font-size:22px;line-height:22px;color:#f4ce20;text-align:center;letter-spacing:1px;width:240px">NEW HIGH SCORE!</div>
+</div>
+<div class="screen" data-screen="error">
+<div style="left:6px;top:6px;width:228px;height:308px;border:3px solid #ef4037;border-radius:8px"></div>
+<svg style="left:70px;top:48px" width="100" height="88" viewBox="0 0 100 88" aria-hidden="true"><path d="M50 6 L95 82 H5 Z" fill="none" stroke="#ef4037" stroke-width="7" stroke-linejoin="round"/><rect x="46" y="32" width="8" height="28" rx="3" fill="#ef4037"/><circle cx="50" cy="70" r="5" fill="#ef4037"/></svg>
+<div class="f-display" style="left:0px;top:150px;height:40px;font-size:40px;line-height:40px;color:#ef4037;text-align:center;letter-spacing:1px;width:240px">OUT OF ORDER</div>
+<div class="f-display" style="left:0px;top:206px;height:22px;font-size:22px;line-height:22px;color:#f5f5f0;text-align:center;letter-spacing:1px;width:240px">PLEASE CALL STAFF</div>
+<div style="left:24px;top:246px;width:192px;height:1px;background:#2a2e35"></div>
+<div class="f-display" style="left:70px;top:264px;height:20px;font-size:20px;line-height:20px;color:#8b929b;text-align:left;letter-spacing:1px;width:50px">CODE</div>
+<div class="f-mono" style="left:122px;top:266px;height:16px;font-size:16px;line-height:16px;color:#f5f5f0;text-align:left;letter-spacing:0px;width:48px;background:#000000" data-dyn="code" data-fmt="E%02d">E03</div>
+</div>
+</body></html>

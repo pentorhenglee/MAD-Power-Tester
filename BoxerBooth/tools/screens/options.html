@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Boxer Booth — เลือกแบบหน้าจอ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+<style>
+  :root{ --ink:#1b1b1f; --bg:#f4f5f7; --card:#fff; --line:#d8dbe0; --muted:#666c78; }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e9eaed; --bg:#16171a; --card:#1f2024; --line:#32343a; --muted:#9aa0ab; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px 20px 60px;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Helvetica Neue",sans-serif}
+  h1{font-size:20px;margin:0 0 4px}
+  p.lead{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.6}
+  h2{font-size:14px;margin:30px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .row{display:flex;flex-wrap:wrap;gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px}
+  .cap{font-size:12px;font-weight:700;margin:8px 2px 0}
+  .cap small{display:block;font-weight:400;color:var(--muted);margin-top:2px;line-height:1.5}
+  .frame{width:320px;height:240px;position:relative;overflow:hidden;
+         border-radius:3px;transform-origin:top left}
+  .wrap{width:320px;height:240px;overflow:hidden}
+  body.x2 .wrap{width:640px;height:480px}
+  body.x2 .frame{transform:scale(2)}
+  .bar{position:sticky;top:0;z-index:9;background:var(--bg);padding:8px 0 14px;margin:-8px 0 0}
+  button{font:inherit;font-size:13px;padding:7px 14px;border-radius:7px;cursor:pointer;
+         border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .px{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-weight:700}
+  .cloud{position:absolute;border-radius:50px}
+  .sp{position:absolute}
+  .logo{position:absolute;left:0;top:6px;width:320px;text-align:center;
+        font-family:'Luckiest Guy','Arial Black',sans-serif;font-size:31px;letter-spacing:1px;
+        paint-order:stroke fill}
+  .sub{position:absolute;left:0;top:46px;width:320px;text-align:center;
+       font-weight:800;font-size:10px;letter-spacing:2px}
+  .btn{position:absolute;left:56px;top:152px;width:208px;height:30px;border-radius:15px}
+  .btn .px{position:absolute;left:13px;top:5px;font-size:16px;letter-spacing:2.2px}
+  .panel{position:absolute;left:10px;top:188px;width:300px;height:46px;border-radius:10px}
+  .panel .lab{position:absolute;left:10px;top:6px;font-size:8px;letter-spacing:1.2px}
+  .panel .big{position:absolute;left:96px;top:13px;font-size:24px;letter-spacing:3.4px}
+  .hdr{position:absolute;left:0;top:0;width:320px;height:32px}
+  .hdr .px{position:absolute;left:10px;top:8px;font-size:16px;letter-spacing:2px;color:#fff}
+  .lbl{position:absolute;font-size:8px;letter-spacing:1.2px;color:#2B3A67}
+  .gauge{position:absolute;left:10px;width:300px;height:38px;border:3px solid #2B3A67;
+         border-radius:6px;background:#fff;overflow:hidden}
+  .gauge i{position:absolute;left:0;top:0;height:100%;display:block}
+  .cd{position:absolute;left:0;top:180px;width:320px;text-align:center;
+      font-size:44px;letter-spacing:4px;color:#2B3A67}
+  .sec{position:absolute;left:264px;top:206px;font-size:14px;color:#2B3A67}
+  .dot{position:absolute;width:34px;height:34px;border-radius:50%;border:3px solid #2B3A67}
+</style>
+</head>
+<body>
+
+<h1>Boxer Booth — เลือกแบบหน้าจอ</h1>
+<p class="lead">
+  ทุกกรอบคือขนาดจริง <strong>320 × 240</strong> เท่าจอ ILI9341 เป๊ะ ๆ<br>
+  ตัวอักษรที่เป็น monospace คือส่วนที่โค้ดวาดทับตอนรัน ส่วนที่เหลืออบลงไปในรูปพื้นหลัง<br>
+  ไฟล์นี้อยู่ในเครื่องล้วน ไม่ได้ส่งออกไปไหน
+</p>
+
+<div class="bar">
+  <button id="zoom" aria-pressed="false">ขยาย 2 เท่า</button>
+</div>
+
+<h2>เลือกโทนสี — หน้า ATTRACT</h2>
+<div class="row" id="attract"></div>
+
+<h2>หน้าด่าน (ใช้โทน A เป็นตัวอย่าง)</h2>
+<div class="row" id="stages"></div>
+
+<script>
+const THEMES = [
+  { key:'A', name:'SKY', note:'ฟ้าพาสเทล สว่าง อ่านง่ายที่สุดในห้องสว่าง',
+    bg:'linear-gradient(#5EC8F5 0%,#8FDCFB 45%,#BDEEFF 100%)',
+    ink:'#2B3A67', logo:'#FFD83D', sub:'#2B3A67', cloud:'rgba(255,255,255,.55)',
+    star:'#fff', btn:'#FFC21A', btnInk:'#2B3A67', panel:'#FFFFFF', lab:'#5A6B99', big:'#2B3A67' },
+  { key:'B', name:'SUNSET', note:'ส้มอุ่น เตะตาจากไกล แต่สู้แสงจ้าได้น้อยกว่า A',
+    bg:'linear-gradient(#FF8A4C 0%,#FFB36B 48%,#FFDFA8 100%)',
+    ink:'#7A2E12', logo:'#FFF3D6', sub:'#7A2E12', cloud:'rgba(255,255,255,.45)',
+    star:'#FFF3D6', btn:'#FF6B3D', btnInk:'#FFF3D6', panel:'#FFF8EE', lab:'#A4624A', big:'#7A2E12' },
+  { key:'C', name:'NIGHT', note:'เข้ม คอนทราสต์สูงสุด ดูเป็นตู้เกมจริงที่สุด',
+    bg:'linear-gradient(#141B4D 0%,#243075 55%,#36459E 100%)',
+    ink:'#0B1133', logo:'#56E8FF', sub:'#9FB4FF', cloud:'rgba(255,255,255,.12)',
+    star:'#CFE9FF', btn:'#FF4D8D', btnInk:'#fff', panel:'#0E1736', lab:'#6E86C9', big:'#8FE9FF' },
+  { key:'D', name:'MINT', note:'เขียวมิ้นต์ สดใส ต่างจากตู้อื่นในห้องแน่นอน',
+    bg:'linear-gradient(#35CFA9 0%,#7CE8CC 50%,#C8F7EA 100%)',
+    ink:'#0E4F42', logo:'#FF7A59', sub:'#0E4F42', cloud:'rgba(255,255,255,.5)',
+    star:'#fff', btn:'#FFD166', btnInk:'#0E4F42', panel:'#FFFFFF', lab:'#5C8C80', big:'#0E4F42' },
+];
+
+const chicken = ink => `
+<svg width="86" height="78" viewBox="0 0 86 78" role="img" aria-label="มาสคอตไก่">
+ <path d="M34 15 q4-11 9-2 q5-10 10-1 q5-8 8 3 z" fill="#E8503A" stroke="${ink}" stroke-width="2.5" stroke-linejoin="round"/>
+ <ellipse cx="46" cy="44" rx="26" ry="25" fill="#FFFDF7" stroke="${ink}" stroke-width="3"/>
+ <ellipse cx="55" cy="48" rx="11" ry="13" fill="#EFEADA" stroke="${ink}" stroke-width="2"/>
+ <path d="M21 39 l-14 6 l14 6 z" fill="#F5B52E" stroke="${ink}" stroke-width="2.5" stroke-linejoin="round"/>
+ <circle cx="31" cy="34" r="3.6" fill="${ink}"/>
+ <path d="M23 53 q-5 6 1 9 q6-2 5-9 z" fill="#E8503A" stroke="${ink}" stroke-width="2"/>
+ <path d="M38 68 l0 6 M34 74 l8 0 M54 68 l0 6 M50 74 l8 0" stroke="#F5B52E" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>`;
+
+const attract = t => `
+<div class="frame" style="background:${t.bg}">
+  <div class="cloud" style="left:-10px;top:90px;width:72px;height:22px;background:${t.cloud}"></div>
+  <div class="cloud" style="left:256px;top:72px;width:84px;height:24px;background:${t.cloud}"></div>
+  <div class="sp" style="left:14px;top:58px;font-size:13px;color:${t.star}">&#10022;</div>
+  <div class="sp" style="left:292px;top:50px;font-size:16px;color:${t.star}">&#10022;</div>
+  <div class="sp" style="left:36px;top:124px;font-size:10px;color:${t.star}">&#10022;</div>
+  <div class="sp" style="left:280px;top:118px;font-size:11px;color:${t.star}">&#10022;</div>
+  <div class="logo" style="color:${t.logo};-webkit-text-stroke:5px ${t.ink}">POWER TESTER</div>
+  <div class="sub" style="color:${t.sub}">3 STAGE POWER TEST</div>
+  <div style="position:absolute;left:117px;top:64px">${chicken(t.ink)}</div>
+  <div class="btn" style="background:${t.btn};border:3px solid ${t.ink}">
+    <div class="px" style="color:${t.btnInk}">TOUCH TO START</div>
+  </div>
+  <div class="panel" style="background:${t.panel};border:3px solid ${t.ink}">
+    <div class="px lab" style="color:${t.lab}">TODAY BEST</div>
+    <div class="px big" style="color:${t.big}">2830</div>
+  </div>
+</div>`;
+
+const T = THEMES[0];
+const gauge = (y,w,c) => `<div class="gauge" style="top:${y}px"><i style="width:${w}px;background:${c}"></i></div>`;
+
+const scream = `
+<div class="frame" style="background:${T.bg}">
+  <div class="hdr" style="background:#2BA8DE"><div class="px">1/3  SCREAM</div></div>
+  <div class="px lbl" style="left:12px;top:40px">LOUDNESS</div>
+  ${gauge(52,186,'#19C6F5')}
+  <div class="px lbl" style="left:12px;top:100px">SCORE</div>
+  ${gauge(112,122,'#19C6F5')}
+  <div class="px cd">7</div><div class="px sec">SEC</div>
+</div>`;
+
+const smash = `
+<div class="frame" style="background:${T.bg}">
+  <div class="hdr" style="background:#E8A800"><div class="px">2/3  SMASH</div></div>
+  <div class="px lbl" style="left:20px;top:56px;font-size:12px">HITS</div>
+  <div class="px" style="position:absolute;left:18px;top:78px;font-size:44px;letter-spacing:4px;color:#2B3A67">42</div>
+  ${[0,1,2].map(r=>[0,1,2].map(c=>{
+    const on = (r===0&&c===1);
+    return `<div class="dot" style="left:${186+c*44}px;top:${52+r*46}px;background:${on?'#FFC21A':'rgba(255,255,255,.75)'}"></div>`;
+  }).join('')).join('')}
+  <div class="px cd">9</div><div class="px sec">SEC</div>
+</div>`;
+
+const punch = `
+<div class="frame" style="background:${T.bg}">
+  <div class="hdr" style="background:#D63A2F"><div class="px">3/3  PUNCH</div></div>
+  <div class="px" style="position:absolute;left:0;top:54px;width:320px;text-align:center;font-size:24px;letter-spacing:3px;color:#D63A2F">HIT NOW</div>
+  <div class="px lbl" style="left:12px;top:100px">FORCE</div>
+  ${gauge(112,208,'#E8503A')}
+  <div class="px lbl" style="left:12px;top:176px;font-size:12px">PUNCH LEFT</div>
+  ${[0,1,2].map(i=>`<div style="position:absolute;left:${170+i*38}px;top:${192}px;width:22px;height:22px;border-radius:50%;border:3px solid #2B3A67;background:${i<2?'#E8503A':'rgba(255,255,255,.8)'}"></div>`).join('')}
+</div>`;
+
+const card = (inner, cap, sub) =>
+  `<div class="card"><div class="wrap">${inner}</div><div class="cap">${cap}<small>${sub}</small></div></div>`;
+
+document.getElementById('attract').innerHTML =
+  THEMES.map(t => card(attract(t), `${t.key} · ${t.name}`, t.note)).join('');
+document.getElementById('stages').innerHTML =
+  card(scream,'ด่าน 1 · SCREAM','แถบบน = ความดังสด · แถบล่าง = คะแนนสะสม ขึ้นอย่างเดียว') +
+  card(smash,'ด่าน 2 · SMASH','ตาราง 3x3 สะท้อนปุ่มจริง ดวงเหลือง = ดวงที่ต้องตบ') +
+  card(punch,'ด่าน 3 · PUNCH','แถบ FORCE ค้างที่ยอดสูงสุด · จุดล่าง = หมัดที่เหลือ');
+
+const b = document.getElementById('zoom');
+b.addEventListener('click', () => {
+  const on = document.body.classList.toggle('x2');
+  b.setAttribute('aria-pressed', on);
+  b.textContent = on ? 'ขนาดจริง 1 เท่า' : 'ขยาย 2 เท่า';
+});
+</script>
+</body>
+</html>

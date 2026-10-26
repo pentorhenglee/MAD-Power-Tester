@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8">
+<title>Boxer Booth — ไล่ดูหน้าจอ</title>
+<style>
+:root{--bg:#141418;--ink:#e9eaed;--muted:#8d939e;--line:#2c2e35}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+     font-family:-apple-system,"Helvetica Neue",sans-serif;
+     display:flex;flex-direction:column;align-items:center;gap:14px;padding:26px 16px 50px}
+h1{font-size:17px;margin:0;font-weight:700}
+.hint{font-size:12px;color:var(--muted);margin:-6px 0 2px;text-align:center;line-height:1.7}
+.stage{position:relative;cursor:pointer;user-select:none;
+       border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#000;
+       width:480px;height:640px}
+.stage img{width:480px;height:640px;display:block;image-rendering:pixelated}
+.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:520px}
+button{font:inherit;font-size:12px;padding:6px 11px;border-radius:6px;cursor:pointer;
+       border:1px solid var(--line);background:#1e1f25;color:var(--ink)}
+button[aria-current="true"]{background:#e9eaed;color:#141418;border-color:#e9eaed;font-weight:700}
+.meta{font-size:13px;color:var(--muted);text-align:center}
+.meta b{color:var(--ink);font-size:15px}
+kbd{background:#1e1f25;border:1px solid var(--line);border-radius:4px;padding:1px 6px;font-size:11px}
+</style></head><body>
+
+<h1>Boxer Booth — ไล่ดูหน้าจอ</h1>
+<p class="hint">
+  คลิกที่จอเพื่อไปหน้าถัดไป · คลิกขวาเพื่อย้อนกลับ · หรือกด <kbd>←</kbd> <kbd>→</kbd><br>
+  ภาพคือขนาดจริง 240 × 320 ขยาย 2 เท่า แบบไม่เกลี่ยสี จะได้เห็นความหยาบจริง
+</p>
+
+<div class="stage" id="stage"><img id="shot" alt=""></div>
+<div class="meta"><b id="name"></b><br><span id="idx"></span></div>
+<div class="nav" id="nav"></div>
+
+<script>
+const S = [
+  ['v_attract.png',      'ATTRACT',        'หน้ารอผู้เล่น · สลับกับ ALL TIME BEST ทุก 5 วิ'],
+  ['v_board.png',        'ALL TIME BEST',  '5 อันดับตลอดกาล · เก็บถาวรใน Flash'],
+  ['v_intro.png',        'STAGE INTRO',    'ขึ้น 2 วิ ก่อนเข้าด่าน · บอกวิธีเล่น'],
+  ['v_scream.png',       'STAGE 1 SCREAM', 'วงแหวน = คะแนนสะสม · คลื่น = ความดังสด'],
+  ['v_smash.png',        'STAGE 2 SMASH',  'ตาราง 3x3 ตรงกับปุ่มจริง'],
+  ['v_punch.png',        'STAGE 3 PUNCH',  'จุดล่าง = หมัดที่เหลือ'],
+  ['v_stageresult.png',  'STAGE RESULT',   'ขึ้น 2 วิ หลังจบแต่ละด่าน'],
+  ['v_final.png',        'FINAL RESULT',   'รวม 3 ด่าน · เต็ม 3000'],
+];
+let i = 0;
+const shot=document.getElementById('shot'), nm=document.getElementById('name'),
+      ix=document.getElementById('idx'), nav=document.getElementById('nav');
+
+nav.innerHTML = S.map((s,k)=>`<button data-k="${k}">${k+1}. ${s[1]}</button>`).join('');
+
+function show(k){
+  i = (k + S.length) % S.length;
+  shot.src = S[i][0];
+  shot.alt = S[i][1];
+  nm.textContent = S[i][1];
+  ix.textContent = `${i+1} / ${S.length} — ${S[i][2]}`;
+  [...nav.children].forEach((b,n)=>b.setAttribute('aria-current', n===i));
+}
+document.getElementById('stage').addEventListener('click', ()=>show(i+1));
+document.getElementById('stage').addEventListener('contextmenu', e=>{e.preventDefault();show(i-1);});
+nav.addEventListener('click', e=>{ const k=e.target.dataset.k; if(k!==undefined) show(+k); });
+addEventListener('keydown', e=>{
+  if(e.key==='ArrowRight'||e.key===' ') show(i+1);
+  if(e.key==='ArrowLeft') show(i-1);
+});
+show(0);
+</script>
+</body></html>

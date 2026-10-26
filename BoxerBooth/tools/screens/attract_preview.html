@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:320px;height:240px;overflow:hidden}
+body{position:relative;background:linear-gradient(#5EC8F5 0%,#8FDCFB 45%,#BDEEFF 100%);
+     font-family:"Arial Black","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased}
+
+/* ---- ดาวประดับ (อบลงรูป) ---- */
+.sp{position:absolute;color:#fff;font-family:Arial;line-height:1}
+.s1{left:14px;top:60px;font-size:13px;opacity:.9}
+.s2{left:292px;top:52px;font-size:16px;opacity:.85}
+.s3{left:36px;top:124px;font-size:10px;opacity:.7}
+.s4{left:280px;top:120px;font-size:11px;opacity:.75}
+.s5{left:150px;top:46px;font-size:9px;opacity:.6}
+
+/* ---- เมฆ ---- */
+.cloud{position:absolute;background:rgba(255,255,255,.55);border-radius:50px}
+.c1{left:-10px;top:88px;width:70px;height:22px}
+.c2{left:258px;top:72px;width:80px;height:24px}
+
+/* ---- โลโก้ ---- */
+.logo{position:absolute;left:0;top:8px;width:320px;text-align:center;
+      font-size:30px;letter-spacing:-1px;color:#FFD83D;
+      -webkit-text-stroke:5px #2B3A67;paint-order:stroke fill;
+      text-shadow:0 4px 0 rgba(43,58,103,.35)}
+.sub{position:absolute;left:0;top:44px;width:320px;text-align:center;
+     font-size:11px;color:#2B3A67;letter-spacing:2px;
+     font-family:"Helvetica Neue",sans-serif;font-weight:800}
+
+/* ---- มาสคอต ---- */
+.mascot{position:absolute;left:0;top:62px;width:320px;text-align:center;font-size:76px;line-height:1}
+
+/* ---- แถบปุ่ม (พื้นเรียบ ให้โค้ดเขียนทับ) ---- */
+#btn{position:absolute;left:56px;top:152px;width:208px;height:30px;
+     background:#FFC21A;border:3px solid #2B3A67;border-radius:15px}
+
+/* ---- แผงคะแนน (พื้นเรียบล้วน ให้โค้ดเขียนทับ) ---- */
+#panel{position:absolute;left:10px;top:188px;width:300px;height:46px;
+       background:#FFFFFF;border:3px solid #2B3A67;border-radius:10px}
+.t2{position:absolute;left:14px;top:6px;font-family:Menlo,monospace;font-size:16px;letter-spacing:2.2px;font-weight:700;color:#2B3A67}
+.lbl{position:absolute;left:10px;top:6px;font-family:Menlo,monospace;font-size:8px;letter-spacing:1.2px;font-weight:700;color:#5A6B99}
+.big{position:absolute;left:96px;top:14px;font-family:Menlo,monospace;font-size:24px;letter-spacing:3.4px;font-weight:700;color:#2B3A67}
+</style></head><body>
+  <div class="cloud c1"></div><div class="cloud c2"></div>
+  <div class="sp s1">✦</div><div class="sp s2">✦</div><div class="sp s3">✦</div>
+  <div class="sp s4">✦</div><div class="sp s5">✦</div>
+  <div class="logo">POWER TESTER</div>
+  <div class="sub">3 STAGE POWER TEST</div>
+  <div class="mascot">🐔</div>
+  <div id="btn"><span class="t2">TOUCH TO START</span></div>
+  <div id="panel"><span class="lbl">TODAY BEST</span><span class="big">2830</span></div>
+</body></html>

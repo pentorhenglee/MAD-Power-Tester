@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
+<style>
+/* ===========================================================
+   จอ 240 x 320 แนวตั้ง — ระบบระยะใช้ร่วมทุกหน้า
+
+   แกนนอน   EDGE 16        เนื้อหา x 16..223 (กว้าง 208)
+   แกนตั้ง   HEAD  22..48   หัวเรื่อง
+            RULE1 60
+            BODY  72..246  พื้นที่เนื้อหา
+            RULE2 248
+            FOOT  262..292 แถวล่าง
+   สเกลตัวอักษร  10 · 12 · 14 · 18 · 26 · 44   (ไม่ใช้ค่าอื่น)
+   ทุกบล็อกเว้นห่างกันอย่างน้อย 10 px
+   =========================================================== */
+:root{
+  --edge:16px; --w:208px;
+  --cy:#2EC4F0; --rd:#E8302A; --yl:#FFD400;
+  --gy:#8a8f98; --dim:#5f6771; --ln:#26272c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:240px;background:#000;overflow:hidden}
+.f{width:240px;height:320px;position:relative;overflow:hidden;background:#000}
+.px{font-family:ui-monospace,Menlo,monospace;font-weight:700;line-height:1}
+.disp{font-family:'Archivo Black',sans-serif}
+.ring{position:absolute;inset:0;border:3px solid;pointer-events:none}
+.rule{position:absolute;left:var(--edge);width:var(--w);height:2px;background:var(--ln)}
+/* จัดกลาง: text-indent ชดเชยช่องว่างท้ายที่ letter-spacing เติมมา */
+.c{position:absolute;left:var(--edge);width:var(--w);text-align:center}
+.l{position:absolute;left:var(--edge)}
+.r{position:absolute;right:var(--edge);text-align:right}
+.s1{font-size:10px;letter-spacing:2px;text-indent:2px}
+.s2{font-size:12px;letter-spacing:2px;text-indent:2px}
+.s3{font-size:14px;letter-spacing:2px;text-indent:2px}
+.s4{font-size:18px;letter-spacing:3px;text-indent:3px}
+.s5{font-size:26px;letter-spacing:4px;text-indent:4px}
+.s6{font-size:44px;letter-spacing:2px;text-indent:2px}
+.hd{top:22px}
+.ft{top:268px}
+.body3{line-height:1.75;letter-spacing:1px;text-indent:1px;font-size:12px}
+</style></head><body>
+
+<!-- ============ 1 ATTRACT ============ -->
+<div class="f">
+  <!-- สายฟ้าอยู่มุมบนเท่านั้น ไม่ล้ำเข้าคอลัมน์ข้อความ -->
+  <svg width="240" height="320" style="position:absolute">
+    <path d="M26 18 L48 18 L35 46 L53 46 L20 88 L31 54 L15 54 Z" fill="#FFD400"/>
+    <path d="M214 18 L192 18 L205 46 L187 46 L220 88 L209 54 L225 54 Z" fill="#B89200"/>
+  </svg>
+  <div class="disp c" style="top:104px;font-size:44px;line-height:.95;color:#fff;letter-spacing:-2px">POWER<br>TESTER</div>
+  <div class="px c s3" style="top:196px;color:var(--yl)">TAP TO START</div>
+  <div class="rule" style="top:248px"></div>
+  <div class="px c s1" style="top:260px;color:var(--gy)">HIGH SCORE</div>
+  <div class="px c s5" style="top:278px;color:#fff">2830</div>
+</div>
+
+<!-- ============ 2 ALL TIME BEST ============ -->
+<div class="f">
+  <div class="ring" style="border-color:var(--cy)"></div>
+  <div class="px c s4 hd" style="color:var(--cy)">ALL TIME BEST</div>
+  <div class="rule" style="top:60px;background:#16333f"></div>
+  <div id="board"></div>
+  <div class="rule" style="top:248px;background:#16333f"></div>
+  <div class="px c s2 ft" style="color:var(--dim)">TAP TO CONTINUE</div>
+</div>
+
+<!-- ============ 3 STAGE INTRO ============ -->
+<div class="f">
+  <div class="px c s3 hd" style="color:#fff">STAGE 1 / 3</div>
+  <svg width="240" height="320" style="position:absolute">
+    <g transform="translate(120,98)">
+      <path d="M-28 -17 L4 -32 L4 22 L-28 7 Z" fill="#2EC4F0"/>
+      <rect x="-39" y="-11" width="13" height="20" rx="3" fill="#2EC4F0"/>
+      <g stroke="#2EC4F0" stroke-width="4" stroke-linecap="round">
+        <path d="M15 -13 h13"/><path d="M15 0 h19"/><path d="M15 13 h13"/>
+      </g>
+    </g>
+  </svg>
+  <div class="px c s5" style="top:146px;color:var(--cy)">SCREAM</div>
+  <div class="px c body3" style="top:188px;color:var(--gy)">SHOUT AS LOUD<br>AS YOU CAN<br>FOR 10 SECONDS</div>
+  <div style="position:absolute;left:44px;top:262px;width:152px;height:30px;background:var(--cy);border-radius:15px"></div>
+  <div class="px c s3" style="top:270px;color:#00242f">TAP TO START</div>
+</div>
+
+<!-- ============ 4 SCREAM ============ -->
+<div class="f">
+  <div class="px c s5 hd" style="color:var(--cy)">SCREAM</div>
+  <div id="ring"></div>
+  <div class="px c s6" style="top:118px;color:#fff">624</div>
+  <div class="px c s2" style="top:172px;color:var(--dim)">/1000</div>
+  <div id="wave" style="position:absolute;left:24px;top:216px;width:192px;height:28px"></div>
+  <div class="px c s4 ft" style="color:#fff">06.2s</div>
+</div>
+
+<!-- ============ 5 SMASH ============ -->
+<div class="f">
+  <div class="ring" style="border-color:var(--rd)"></div>
+  <div class="px c s5 hd" style="color:var(--rd)">SMASH</div>
+  <div id="pads"></div>
+  <div class="px l s2" style="top:224px;color:var(--rd)">TIME</div>
+  <div class="px r s3" style="top:223px;color:#fff">12.8s</div>
+  <div style="position:absolute;left:var(--edge);top:242px;width:var(--w);height:7px;background:#3a1412"></div>
+  <div style="position:absolute;left:var(--edge);top:242px;width:125px;height:7px;background:var(--rd)"></div>
+  <div class="px l s2" style="top:272px;color:var(--rd)">HITS</div>
+  <div class="px r s4" style="top:269px;color:#fff">12/30</div>
+</div>
+
+<!-- ============ 6 PUNCH ============ -->
+<div class="f">
+  <div class="ring" style="border-color:var(--yl)"></div>
+  <div class="px c s5 hd" style="color:var(--yl)">PUNCH</div>
+  <svg width="240" height="320" style="position:absolute">
+    <g transform="translate(120,118)">
+      <rect x="-20" y="-40" width="40" height="78" rx="15" fill="#F2B800"/>
+      <rect x="-20" y="-40" width="15" height="78" rx="15" fill="#FFD95E" opacity=".5"/>
+      <rect x="-22" y="-46" width="44" height="11" rx="4" fill="#8A6A00"/>
+      <path d="M0 -56 v10" stroke="#8A6A00" stroke-width="4"/>
+      <g fill="#FFD400">
+        <path d="M-48 -22 L-37 -22 L-43 -9 L-33 -9 L-50 11 L-43 -5 L-54 -5 Z"/>
+        <path d="M48 22 L37 22 L43 9 L33 9 L50 -11 L43 5 L54 5 Z"/>
+      </g>
+    </g>
+  </svg>
+  <div style="position:absolute;left:55px;top:186px;width:130px;height:28px;background:var(--yl);border-radius:14px"></div>
+  <div class="px c s3" style="top:193px;color:#2a2200">READY</div>
+  <div class="px c body3" style="top:228px;font-size:11px;color:var(--gy)">PRESS GREEN TO ARM<br>THEN PUNCH</div>
+  <div id="dots" style="position:absolute;left:0;top:278px;width:240px;height:18px"></div>
+</div>
+
+<!-- ============ 7 STAGE RESULT ============ -->
+<div class="f">
+  <div class="ring" style="border-color:var(--rd)"></div>
+  <div class="px c s5 hd" style="color:var(--rd)">SMASH</div>
+  <div style="position:absolute;left:var(--edge);top:76px;width:var(--w);height:140px;border:2px solid var(--rd)"></div>
+  <div class="px c s2" style="top:94px;color:var(--gy)">SCORE</div>
+  <div class="px c s6" style="top:120px;color:#fff">735</div>
+  <div class="px c s2" style="top:182px;color:var(--dim)">/1000</div>
+  <div class="px c s3 ft" style="color:var(--rd)">NEXT: PUNCH</div>
+</div>
+
+<!-- ============ 8 FINAL RESULT ============ -->
+<div class="f">
+  <div class="ring" style="border-color:var(--yl)"></div>
+  <div class="px c s2 hd" style="color:var(--gy)">TOTAL SCORE</div>
+  <div class="px c s6" style="top:44px;color:#fff">2198</div>
+  <div class="px c s2" style="top:98px;color:var(--dim)">/3000</div>
+  <div class="rule" style="top:120px"></div>
+  <div class="px l s3" style="top:136px;color:var(--cy)">SCREAM</div>
+  <div class="px r s3" style="top:136px;color:#fff">668</div>
+  <div class="px l s3" style="top:164px;color:var(--rd)">SMASH</div>
+  <div class="px r s3" style="top:164px;color:#fff">735</div>
+  <div class="px l s3" style="top:192px;color:var(--yl)">PUNCH</div>
+  <div class="px r s3" style="top:192px;color:#fff">795</div>
+  <div class="rule" style="top:220px"></div>
+  <div style="position:absolute;left:var(--edge);top:262px;width:var(--w);height:30px;border:2px solid var(--yl)"></div>
+  <div class="px c s3" style="top:270px;color:var(--yl)">NEW HIGH SCORE</div>
+</div>
+
+<script>
+const EDGE=16, W=208, CX=120;
+
+/* ตารางอันดับ 5 แถว: 74 + i*34  -> 74..244 */
+let b='';
+[2830,2710,2600,2480,2320].forEach((v,i)=>{
+  const y=74+i*34, gold=(i===0);
+  b+=`<div class="px" style="position:absolute;left:${EDGE+10}px;top:${y+3}px;font-size:14px;color:${gold?'#FFD400':'#5f6771'}">${i+1}</div>`;
+  if(gold) b+=`<svg width="20" height="12" style="position:absolute;left:${EDGE+34}px;top:${y+4}px">
+      <path d="M1 11 L3 2 L9 7 L14 0 L19 11 Z" fill="#FFD400"/></svg>`;
+  b+=`<div class="px" style="position:absolute;right:${EDGE+10}px;top:${y}px;font-size:18px;letter-spacing:2px;color:${gold?'#fff':'#c8c8ce'}">${v}</div>`;
+});
+document.getElementById('board').innerHTML=b;
+
+/* วงแหวน 28 เสี้ยว ศูนย์กลาง (120,140) R 56 -> กิน 78..202 */
+let s='', N=28, ON=17, R=56;
+for(let i=0;i<N;i++){
+  const a=(-90+i*360/N)*Math.PI/180;
+  const x=CX+R*Math.cos(a), y=140+R*Math.sin(a);
+  s+=`<div style="position:absolute;left:${x-5}px;top:${y-5}px;width:11px;height:11px;border-radius:2px;background:${i<ON?'#2EC4F0':'#16303b'}"></div>`;
+}
+document.getElementById('ring').innerHTML=s;
+
+/* คลื่น 24 แท่ง เต็มความกว้างเนื้อหา */
+let w='', H=[7,12,20,10,26,15,28,21,13,24,9,18,27,11,22,14,28,8,19,25,12,16,23,10];
+H.forEach((h,i)=>{ w+=`<div style="position:absolute;left:${i*8}px;bottom:0;width:4px;height:${h}px;background:#2EC4F0"></div>`; });
+document.getElementById('wave').innerHTML=w;
+
+/* ปุ่ม 3x3: 40px เว้น 10 -> 140 กว้าง, แถว 72 / 122 / 172 จบที่ 212 */
+let p='', ONP=[1,4,6], D=40, G=10;
+const x0 = CX - (3*D + 2*G)/2;
+for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+  const i=r*3+c, on=ONP.includes(i);
+  p+=`<div style="position:absolute;left:${x0+c*(D+G)}px;top:${72+r*50}px;width:${D}px;height:${D}px;border-radius:50%;
+      background:${on?'#E8302A':'#241c20'};border:3px solid ${on?'#FF6B5A':'#4a3038'}"></div>`;
+}
+document.getElementById('pads').innerHTML=p;
+
+/* จุดนับหมัด 5 จุด 18px เว้น 14 -> 146 กว้าง จัดกลาง */
+let d='', ND=5, DD=18, DG=14;
+const dx = CX - (ND*DD + (ND-1)*DG)/2;
+for(let i=0;i<ND;i++){
+  d+=`<div style="position:absolute;left:${dx+i*(DD+DG)}px;top:0;width:${DD}px;height:${DD}px;border-radius:50%;
+      background:${i===0?'#3BD16A':'#2a2a30'};border:2px solid ${i===0?'#7CF09B':'#44444c'}"></div>`;
+}
+document.getElementById('dots').innerHTML=d;
+</script>
+</body></html>

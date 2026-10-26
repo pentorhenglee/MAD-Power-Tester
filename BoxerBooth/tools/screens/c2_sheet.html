@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:648px;height:488px;background:#2a2a2e;overflow:hidden}
+.grid{display:grid;grid-template-columns:320px 320px;grid-template-rows:240px 240px;gap:4px;padding:2px}
+.f{width:320px;height:240px;position:relative;overflow:hidden;background:#000}
+.px{font-family:ui-monospace,Menlo,monospace;font-weight:700}
+.disp{font-family:'Archivo Black',sans-serif}
+.hair{position:absolute;background:#1a1a1a}
+</style></head><body>
+<div class="grid">
+
+<!-- ============ 1. ATTRACT ============ -->
+<div class="f">
+  <!-- สายฟ้า (อบลงรูป) -->
+  <svg width="320" height="240" style="position:absolute;left:0;top:0">
+    <path d="M34 38 L58 38 L44 70 L64 70 L28 118 L40 80 L22 80 Z" fill="#FFD400"/>
+    <path d="M286 150 L262 150 L276 118 L256 118 L292 70 L280 108 L298 108 Z" fill="#FFD400"/>
+    <path d="M300 34 L288 34 L294 50 L284 50 L302 74 L296 55 L306 55 Z" fill="#FFD400" opacity=".55"/>
+    <path d="M20 160 L32 160 L26 144 L36 144 L18 120 L24 139 L14 139 Z" fill="#FFD400" opacity=".55"/>
+  </svg>
+  <div class="disp" style="position:absolute;left:0;top:40px;width:320px;text-align:center;
+       font-size:52px;line-height:.92;color:#fff;letter-spacing:-2px">POWER<br>TESTER</div>
+  <div class="px" style="position:absolute;left:0;top:152px;width:320px;text-align:center;
+       font-size:16px;letter-spacing:3px;color:#FFD400">INSERT COIN</div>
+  <div class="hair" style="left:40px;top:184px;width:240px;height:2px"></div>
+  <div class="px" style="position:absolute;left:0;top:194px;width:320px;text-align:center;
+       font-size:10px;letter-spacing:2px;color:#7a7a80">HIGH SCORE</div>
+  <div class="px" style="position:absolute;left:0;top:208px;width:320px;text-align:center;
+       font-size:24px;letter-spacing:4px;color:#fff">2830</div>
+</div>
+
+<!-- ============ 2. SCREAM ============ -->
+<div class="f">
+  <div class="px" style="position:absolute;left:0;top:12px;width:320px;text-align:center;
+       font-size:24px;letter-spacing:4px;color:#2EC4F0">SCREAM</div>
+  <!-- วงแหวนแบ่งเสี้ยว -->
+  <svg width="320" height="240" style="position:absolute;left:0;top:0">
+    <g>
+      <!-- 28 เสี้ยว เปิด 17 เสี้ยว -->
+      <g id="ring"></g>
+    </g>
+    <script><![CDATA[]]></script>
+  </svg>
+  <div id="ringbox" style="position:absolute;left:0;top:0;width:320px;height:240px"></div>
+  <div class="px" style="position:absolute;left:0;top:94px;width:320px;text-align:center;
+       font-size:40px;letter-spacing:3px;color:#fff">624</div>
+  <div class="px" style="position:absolute;left:0;top:134px;width:320px;text-align:center;
+       font-size:12px;letter-spacing:2px;color:#6b7b85">/1000</div>
+  <!-- waveform -->
+  <div id="wave" style="position:absolute;left:34px;top:176px;width:252px;height:28px"></div>
+  <div class="px" style="position:absolute;left:0;top:210px;width:320px;text-align:center;
+       font-size:18px;letter-spacing:3px;color:#fff">06.2s</div>
+</div>
+
+<!-- ============ 3. SMASH ============ -->
+<div class="f" style="border:3px solid #E8302A">
+  <div class="px" style="position:absolute;left:0;top:10px;width:314px;text-align:center;
+       font-size:24px;letter-spacing:4px;color:#E8302A">SMASH</div>
+  <div id="pads" style="position:absolute;left:0;top:0;width:314px;height:234px"></div>
+  <div class="px" style="position:absolute;left:14px;top:168px;font-size:12px;letter-spacing:2px;color:#E8302A">TIME</div>
+  <div class="px" style="position:absolute;left:214px;top:168px;font-size:14px;color:#fff">12.8s</div>
+  <div style="position:absolute;left:14px;top:186px;width:286px;height:6px;background:#3a1412"></div>
+  <div style="position:absolute;left:14px;top:186px;width:172px;height:6px;background:#E8302A"></div>
+  <div class="px" style="position:absolute;left:14px;top:200px;font-size:12px;letter-spacing:2px;color:#E8302A">HITS</div>
+  <div class="px" style="position:absolute;left:214px;top:198px;font-size:16px;color:#fff">12/30</div>
+</div>
+
+<!-- ============ 4. FINAL RESULT ============ -->
+<div class="f" style="border:3px solid #FFD400">
+  <div class="px" style="position:absolute;left:0;top:12px;width:314px;text-align:center;
+       font-size:13px;letter-spacing:3px;color:#9a9aa0">TOTAL SCORE</div>
+  <div class="px" style="position:absolute;left:0;top:30px;width:314px;text-align:center;
+       font-size:50px;letter-spacing:3px;color:#fff">2198</div>
+  <div class="px" style="position:absolute;left:0;top:84px;width:314px;text-align:center;
+       font-size:12px;letter-spacing:2px;color:#6b6b72">/3000</div>
+  <div class="hair" style="left:24px;top:106px;width:266px;height:2px"></div>
+  <div class="px" style="position:absolute;left:24px;top:118px;font-size:14px;letter-spacing:2px;color:#2EC4F0">SCREAM</div>
+  <div class="px" style="position:absolute;left:228px;top:118px;font-size:14px;color:#fff">668</div>
+  <div class="px" style="position:absolute;left:24px;top:142px;font-size:14px;letter-spacing:2px;color:#E8302A">SMASH</div>
+  <div class="px" style="position:absolute;left:228px;top:142px;font-size:14px;color:#fff">735</div>
+  <div class="px" style="position:absolute;left:24px;top:166px;font-size:14px;letter-spacing:2px;color:#FFD400">PUNCH</div>
+  <div class="px" style="position:absolute;left:228px;top:166px;font-size:14px;color:#fff">795</div>
+  <div style="position:absolute;left:24px;top:196px;width:266px;height:30px;border:2px solid #FFD400"></div>
+  <div class="px" style="position:absolute;left:0;top:203px;width:314px;text-align:center;
+       font-size:14px;letter-spacing:2px;color:#FFD400">NEW HIGH SCORE</div>
+</div>
+
+</div>
+<script>
+// วงแหวนแบ่งเสี้ยว 28 ช่อง เปิด 17
+let s='';
+const cx=160, cy=112, R=52, N=28, ON=17;
+for(let i=0;i<N;i++){
+  const a=(-90 + i*360/N) * Math.PI/180;
+  const x=cx+R*Math.cos(a), y=cy+R*Math.sin(a);
+  const col = i<ON ? '#2EC4F0' : '#17323d';
+  s+=`<div style="position:absolute;left:${x-5}px;top:${y-5}px;width:10px;height:10px;border-radius:2px;background:${col}"></div>`;
+}
+document.getElementById('ringbox').innerHTML=s;
+
+// waveform
+let w='';
+const H=[6,11,18,9,24,14,27,19,12,22,8,16,25,10,20,13,26,7,17,23,11,15,21,9];
+H.forEach((h,i)=>{ w+=`<div style="position:absolute;left:${i*11}px;bottom:0;width:5px;height:${h}px;background:#2EC4F0"></div>`; });
+document.getElementById('wave').innerHTML=w;
+
+// ปุ่ม 3x3
+let p='';
+const ON_PAD=[1,4,6];
+for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+  const i=r*3+c, on=ON_PAD.includes(i);
+  const x=76+c*56, y=44+r*42;
+  p+=`<div style="position:absolute;left:${x}px;top:${y}px;width:44px;height:32px;border-radius:6px;
+      background:${on?'#E8302A':'#2a2226'};border:2px solid ${on?'#FF6B5A':'#453038'};
+      box-shadow:${on?'inset 0 3px 0 rgba(255,255,255,.3)':'none'}"></div>`;
+}
+document.getElementById('pads').innerHTML=p;
+</script>
+</body></html>

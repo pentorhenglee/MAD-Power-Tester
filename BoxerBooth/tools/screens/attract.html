@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:320px;height:240px;overflow:hidden}
+body{position:relative;background:#7FD4F7}
+svg{position:absolute;left:0;top:0}
+.px{font-family:ui-monospace,Menlo,monospace;font-weight:700}
+/* พื้นเรียบสำหรับให้โค้ดเขียนทับ */
+#btn{position:absolute;left:52px;top:150px;width:216px;height:32px;
+     background:#FFB31A;border:3px solid #2A2350;border-radius:16px;
+     box-shadow:inset 0 3px 0 rgba(255,255,255,.55), 0 4px 0 #C97E00}
+#panel{position:absolute;left:10px;top:190px;width:300px;height:44px;
+       background:#FFFFFF;border:3px solid #2A2350;border-radius:10px;
+       box-shadow:0 3px 0 rgba(42,35,80,.25)}
+.logo{position:absolute;left:0;top:4px;width:320px;text-align:center;
+  font-family:'Luckiest Guy',sans-serif;font-size:33px;letter-spacing:.5px;
+  background:linear-gradient(#FFF07A 25%,#FFC01E 60%,#FF9500 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:6px #2A2350;paint-order:stroke fill;
+  filter:drop-shadow(0 3px 0 rgba(42,35,80,.45))}
+.sub{position:absolute;left:0;top:44px;width:320px;text-align:center;
+  font-family:'Luckiest Guy',sans-serif;font-size:11px;letter-spacing:2.4px;
+  color:#FFF3C4;-webkit-text-stroke:3px #2A2350;paint-order:stroke fill}
+</style></head><body>
+
+<svg width="320" height="240" viewBox="0 0 320 240">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2FB3EF"/><stop offset=".55" stop-color="#8ADBFA"/>
+    <stop offset="1" stop-color="#CFF0FF"/>
+  </linearGradient>
+  <radialGradient id="burst" cx=".5" cy=".42" r=".62">
+    <stop offset="0" stop-color="#FFF6CF" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#FFF6CF" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="bodyG" x1=".25" y1="0" x2=".8" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FFF6E2"/>
+    <stop offset="1" stop-color="#F0DCB8"/>
+  </linearGradient>
+  <linearGradient id="combG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FF6B5A"/><stop offset="1" stop-color="#D22F2A"/>
+  </linearGradient>
+  <linearGradient id="beakG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFD24D"/><stop offset="1" stop-color="#E8930E"/>
+  </linearGradient>
+  <linearGradient id="bandG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FF5C7A"/><stop offset="1" stop-color="#E02348"/>
+  </linearGradient>
+  <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8FE06B"/><stop offset="1" stop-color="#5CBF43"/>
+  </linearGradient>
+</defs>
+
+<rect width="320" height="240" fill="url(#sky)"/>
+<ellipse cx="160" cy="104" rx="150" ry="96" fill="url(#burst)"/>
+
+<!-- รัศมีแสง -->
+<g opacity=".3" fill="#FFFBE8">
+  <path d="M160 104 L116 6 L146 2 Z"/><path d="M160 104 L204 6 L174 2 Z"/>
+  <path d="M160 104 L36 44 L26 70 Z"/><path d="M160 104 L284 44 L294 70 Z"/>
+</g>
+
+<!-- เนิน -->
+<path d="M-10 196 q58-30 110-6 q52 24 104 2 q44-18 126 4 v54 h-340 z" fill="url(#hill)"/>
+<path d="M-10 196 q58-30 110-6 q52 24 104 2 q44-18 126 4" fill="none" stroke="#3E9A2E" stroke-width="3"/>
+
+<!-- เมฆมีมิติ -->
+<g>
+  <ellipse cx="34" cy="98" rx="38" ry="15" fill="#fff"/>
+  <ellipse cx="22" cy="92" rx="22" ry="13" fill="#fff"/>
+  <ellipse cx="46" cy="90" rx="17" ry="11" fill="#fff"/>
+  <ellipse cx="34" cy="106" rx="34" ry="7" fill="#D9F0FF"/>
+</g>
+<g>
+  <ellipse cx="286" cy="78" rx="40" ry="15" fill="#fff"/>
+  <ellipse cx="274" cy="71" rx="23" ry="13" fill="#fff"/>
+  <ellipse cx="300" cy="70" rx="18" ry="11" fill="#fff"/>
+  <ellipse cx="286" cy="86" rx="36" ry="7" fill="#D9F0FF"/>
+</g>
+
+<!-- ประกาย -->
+<g fill="#FFFDF0">
+  <path d="M16 62 l2.6 6.4 6.4 2.6 -6.4 2.6 -2.6 6.4 -2.6-6.4 -6.4-2.6 6.4-2.6 z"/>
+  <path d="M300 118 l2.2 5.4 5.4 2.2 -5.4 2.2 -2.2 5.4 -2.2-5.4 -5.4-2.2 5.4-2.2 z"/>
+  <path d="M44 138 l1.7 4.2 4.2 1.7 -4.2 1.7 -1.7 4.2 -1.7-4.2 -4.2-1.7 4.2-1.7 z"/>
+</g>
+
+<!-- ===== มาสคอต ===== -->
+<g transform="translate(160,112)">
+  <ellipse cx="2" cy="40" rx="34" ry="7" fill="#2A2350" opacity=".18"/>
+
+  <!-- ขา -->
+  <g stroke="#E8930E" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M-11 28 v12"/><path d="M-19 41 h16"/>
+    <path d="M13 28 v12"/><path d="M5 41 h16"/>
+  </g>
+
+  <!-- ตัว -->
+  <ellipse cx="0" cy="6" rx="31" ry="30" fill="url(#bodyG)" stroke="#2A2350" stroke-width="3.5"/>
+  <!-- เงาใต้ตัว -->
+  <path d="M-28 16 a31 30 0 0 0 56 0 a31 30 0 0 1 -56 0 z" fill="#E6CFA6" opacity=".55"/>
+  <!-- ไฮไลต์ -->
+  <ellipse cx="-12" cy="-8" rx="11" ry="8" fill="#fff" opacity=".85" transform="rotate(-25 -12 -8)"/>
+
+  <!-- หงอน -->
+  <path d="M-13 -26 q3-13 9-4 q4-13 10-3 q5-11 9 3 q3 7 -1 10 z"
+        fill="url(#combG)" stroke="#2A2350" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ผ้าคาดหัว -->
+  <path d="M-25 -16 q25-11 50 0 l-2 7 q-24-10 -46 0 z" fill="url(#bandG)" stroke="#2A2350" stroke-width="2.6"/>
+  <path d="M25 -14 l13-5 -4 9 10 1 -14 7 z" fill="url(#bandG)" stroke="#2A2350" stroke-width="2.6" stroke-linejoin="round"/>
+
+  <!-- ตา -->
+  <ellipse cx="-11" cy="-3" rx="5.2" ry="5.8" fill="#fff" stroke="#2A2350" stroke-width="2.4"/>
+  <circle cx="-10" cy="-2" r="2.7" fill="#2A2350"/>
+  <circle cx="-11.4" cy="-3.6" r="1" fill="#fff"/>
+  <ellipse cx="9" cy="-3" rx="5.2" ry="5.8" fill="#fff" stroke="#2A2350" stroke-width="2.4"/>
+  <circle cx="10" cy="-2" r="2.7" fill="#2A2350"/>
+  <circle cx="8.6" cy="-3.6" r="1" fill="#fff"/>
+
+  <!-- แก้ม -->
+  <ellipse cx="-20" cy="6" rx="5" ry="3.4" fill="#FF9BA8" opacity=".8"/>
+  <ellipse cx="18" cy="6" rx="5" ry="3.4" fill="#FF9BA8" opacity=".8"/>
+
+  <!-- ปาก -->
+  <path d="M-3 4 l-9 5 9 5 z" fill="url(#beakG)" stroke="#2A2350" stroke-width="2.6" stroke-linejoin="round"/>
+
+  <!-- เหนียง -->
+  <path d="M-6 14 q-5 7 1 10 q7-2 5-10 z" fill="url(#combG)" stroke="#2A2350" stroke-width="2.4"/>
+
+  <!-- แขนงอกล้าม -->
+  <g stroke="#2A2350" stroke-width="3.2" stroke-linejoin="round">
+    <path d="M29 2 q13-4 15-16 q1-9 -7-10 q-7-1 -8 7" fill="url(#bodyG)"/>
+    <ellipse cx="34" cy="-3" rx="9" ry="8" fill="url(#bodyG)"/>
+  </g>
+  <path d="M30 -5 q4-4 8-1" stroke="#C9A978" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- เส้นพลัง -->
+  <g stroke="#FFE24D" stroke-width="3" stroke-linecap="round" opacity=".95">
+    <path d="M48 -22 l7-7"/><path d="M52 -12 l9-3"/><path d="M44 -30 l3-9"/>
+  </g>
+</g>
+</svg>
+
+<div class="logo">POWER TESTER</div>
+<div class="sub">3 STAGE POWER TEST</div>
+<div id="btn"></div>
+<div id="panel"></div>
+</body></html>
